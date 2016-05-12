@@ -1,5 +1,5 @@
 var localUrlReg = /(https?:\/\/)(localhost|127\.0\.0\.1)/i;
-var toArray = Array.prototype.slice.call
+var toArray = function(o){return Array.prototype.slice.call(o)}
 
 var $qrSize = document.getElementById('qrSize')
 var $qrImage = document.getElementById("qrImage")
