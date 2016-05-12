@@ -1,4 +1,5 @@
 var localUrlReg = /(https?:\/\/)(localhost|127\.0\.0\.1)/i;
+var toArray = Array.prototype.slice.call
 
 var $qrSize = document.getElementById('qrSize')
 var $qrImage = document.getElementById("qrImage")
@@ -75,7 +76,7 @@ function updateHistoryList(url){
 				.join('');
 
 	$historyList.innerHTML = `<p class="his-btn"><a class="historyBtn" href="#">清空历史记录</a></p><ul>${html}</ul>`;
-	$historyList.querySelectorAll('a').forEach(function(aBtn){
+	toArray( $historyList.querySelectorAll('a') ).forEach(function(aBtn){
 		aBtn.addEventListener('click', function(e){
 			e.preventDefault();
 			if(this.className == 'historyBtn'){ // 清空
@@ -100,7 +101,7 @@ function updateIpsList(ips){
 	}).join('');
 	$ipList.innerHTML = `<h4>对外IP列表：</h4><ul>${html}</ul>`;
 
-	$ipList.querySelectorAll('ul a').forEach(function(aBtn){
+	toArray( $ipList.querySelectorAll('ul a') ).forEach(function(aBtn){
 		aBtn.addEventListener('click', function(e){
 			e.preventDefault();
 			var url = $qrTxt.value
@@ -134,7 +135,7 @@ $downQrImg.addEventListener('click', function(e){
 }, false)
 
 // Input 修改
-document.querySelectorAll('.col-des input').forEach(function(item){
+toArray( document.querySelectorAll('.col-des input') ).forEach(function(item){
 
 	/* if(item.id == 'colorDark' || item.id == 'colorLight'){
 		item._picker = new jscolor(item)
