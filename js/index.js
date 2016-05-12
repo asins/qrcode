@@ -181,7 +181,7 @@ function createQrImg(txt){
 	var obj = {
 		text: txt || $qrTxt.value,
 		render: 'canvas',
-		size: $qrSize.value || 160,
+		size: $qrSize.value || 200,
 		correctLevel : 3,
 		background: '#'+ $colorLight.value,
 		foreground: '#'+ $colorDark.value,
