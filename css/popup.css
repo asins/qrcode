@@ -1,0 +1,124 @@
+.container .rows {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.container .col-main {
+  -webkit-flex: auto;
+  flex: auto;
+  min-width: 200px;
+  display: table;
+  min-height: 160px;
+  position: relative;
+}
+.container .col-main #qrImage {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.container .col-main #downQrImg {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.container .col-main:hover #downQrImg {
+  display: block;
+}
+.container .col-des {
+  width: 200px;
+  padding-left: 10px;
+}
+.container .col-des h4 {
+  padding: 0;
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.container .col-des p {
+  margin: 10px 0;
+}
+.container .col-des input {
+  border-width: 0 0 1px;
+  width: 52px;
+  font-size: 12px;
+  margin-right: 10px;
+}
+.container .col-des #qrSize {
+  width: 70px;
+}
+.container .col-des #colorLight,
+.container .col-des #minImgSize {
+  margin-right: 0;
+}
+.container .col-des #minImgSrc {
+  width: 134px;
+}
+.container .col-des #qrTxt {
+  width: 100%;
+}
+.container .col-des ul {
+  padding-left: 10px;
+  list-style-type: none;
+  margin: 0;
+}
+.container .col-des ul li {
+  border-bottom: 1px dashed #ccc;
+  line-height: 22px;
+  position: relative;
+}
+.container .col-des ul li a.create {
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  top: 0;
+}
+.container .col-des ul li:last-child {
+  border-bottom: 0;
+}
+.container .his-list .his-btn {
+  border-top: dashed 1px #ccc;
+  text-align: center;
+  line-height: 22px;
+  margin: 10px 0 0;
+}
+.container .his-list ul {
+  padding: 0;
+  margin: 0;
+  max-height: 132px;
+  overflow: hidden;
+  overflow-y: auto;
+  list-style-type: none;
+}
+.container .his-list li {
+  border-bottom: 1px dotted #ccc;
+  line-height: 22px;
+  position: relative;
+  padding-right: 40px;
+}
+.container .his-list li a {
+  text-decoration: none;
+}
+.container .his-list li a.create {
+  display: block;
+  word-break: break-all;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.container .his-list li a.del {
+  display: inline-block;
+  margin-left: 6px;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  top: 0;
+}
