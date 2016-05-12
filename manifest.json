@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "QR二维码生成",
     "description": "生成当前网页URL的二维码，自动将本地(localhost/127.0.0.1)域名替换为对外的IP，也能生成指定URL/文件内容。",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "background": { "scripts": ["js/background.js"] },
     "permissions": ["tabs"],
     "icons": {
